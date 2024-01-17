@@ -4,6 +4,7 @@ import { ThemeProvider } from './contexts/Theme'
 import { useEffect } from 'react'
 import ThemeBtn from './components/ThemeBtn'
 import Card from './components/Card'
+import Banner from './components/Banner'
 
 function App() {
    const [themeMode,setThememode]=useState('light')
@@ -23,9 +24,13 @@ function App() {
 
    },[themeMode]) 
   return (
+  
+    
      <ThemeProvider value={{themeMode,lightTheme,darkTheme}}>
+
 <div className="flex flex-wrap min-h-screen items-center">
                 <div className="w-full">
+               <Banner/>
                     <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
                         {/* themeBtn */}
                         <ThemeBtn />
